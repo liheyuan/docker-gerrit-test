@@ -8,7 +8,7 @@ WEB_IP=$(docker-machine ip $NODE_GERRIT_NAME)
 LDAP_ACCOUNT_DN="dc=coder4,dc=com"
 LDAP_ACCOUNT_PATTERN='(cn=${username})'
 LDAP_SSHUSER_PATTERN='${cn}'
-LDAP_FULLNAME_PATTERN='${cn}'
+LDAP_FULLNAME_PATTERN='${sn}'
 LDAP_QUERY_USERNAME='cn=admin,dc=coder4,dc=com'
 LDAP_QUERY_PASSWORD='admin'
 # env
