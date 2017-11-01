@@ -4,7 +4,8 @@ NODE_LDAP_NAME="node-ldap"
 DOCKER_NAME="sbmvt-gerrit"
 VOLUME_DATA='/var/lib/boot2docker/docker_data/gerrit'
 LDAP_IP=$(docker-machine ip $NODE_LDAP_NAME)
-WEB_IP=$(docker-machine ip $NODE_GERRIT_NAME)
+#WEB_IP=$(docker-machine ip $NODE_GERRIT_NAME)
+WEB_IP='gerrit.coder4.com'
 LDAP_ACCOUNT_DN="dc=coder4,dc=com"
 LDAP_ACCOUNT_PATTERN='(cn=${username})'
 LDAP_SSHUSER_PATTERN='${cn}'

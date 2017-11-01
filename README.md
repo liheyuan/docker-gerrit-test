@@ -12,3 +12,36 @@
 ./start_vm.sh
 ./run_gerrit_docker.sh
 ```
+
+## How to get access to gerrit
+```
+
+# gen ssh-keygen
+ssh-keygen
+
+# modify ~/.ssh/config
+Host gerrit.coder4.com
+    User lihy
+    IdentityFile ~/.ssh/id_rsa
+    Hostname gerrit.coder4.com
+    Port 29418
+
+# upload your key to gerrit User -> Settings -> SSH Public Keys
+
+# Test
+ssh -p 29418 lihy@gerrit.coder4.com
+# If showing 'you have successfully connected over SSH' means success
+
+# Clone project demo2
+git clone ssh://lihy@gerrit.coder4.com:29418/demo2.git
+
+# Init Gerrit
+./initGerrit.sh
+
+# Push review (after commit some change)
+git push review
+
+```
+
+## Basic setting in gerrit
+* Not Allow For Anonymous Users : Projects -> All Projects -> Access -> Read -> Block Anonymous Users
