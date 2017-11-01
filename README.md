@@ -45,3 +45,8 @@ git push review
 
 ## Basic setting in gerrit
 * Not Allow For Anonymous Users : Projects -> All Projects -> Access -> Read -> Block Anonymous Users
+* Install Core Plugin
+```
+ssh -p 29418 lihy@gerrit.coder4.com gerrit plugin install 'jar:file:/var/gerrit/review_site/bin/gerrit.war!/WEB-INF/plugins/commit-message-length-validator.jar'
+ssh -p 29418 lihy@gerrit.coder4.com gerrit plugin install 'jar:file:/var/gerrit/review_site/bin/gerrit.war!/WEB-INF/plugins/download-commands.jar'
+```
